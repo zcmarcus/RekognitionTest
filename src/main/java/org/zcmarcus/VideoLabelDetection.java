@@ -21,8 +21,7 @@ import com.amazonaws.services.sqs.model.QueueAttributeName;
 import com.amazonaws.services.sqs.model.SetQueueAttributesRequest;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -30,8 +29,6 @@ import java.util.List;
 import java.util.Map;
 
 public class VideoLabelDetection {
-
-    private final Logger logger = LogManager.getLogger(this.getClass());
 
     private static String sqsQueueName=null;
     private static String snsTopicName=null;
@@ -50,7 +47,17 @@ public class VideoLabelDetection {
             .withSNSTopicArn(snsTopicArn)
             .withRoleArn(roleArn);
 
-
+    /**
+     * Main method that does the following:
+     * 1. creates Simple Notification Service client, Simple Queue Service client, and Rekognition
+     * Service client objects,
+     * 2. creates new topic and queue objects,
+     * 3. kicks off the label detection process and, if successful, retrieves and prints label detection results, and
+     * 4. finally, cleans up by deleting Topic and Queue objects
+     *
+     * @param args The command line arguments. Expected String arguments: video filename, bucket name, and IAM service role ARN
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
 
         video = args[0];
@@ -78,7 +85,11 @@ public class VideoLabelDetection {
 
     }
 
-
+    /**
+     * Checks in a loop for completion of processing job in queue
+     * @return The success status.
+     * @throws Exception
+     */
     static boolean GetSQSMessageSuccess() throws Exception
     {
         boolean success=false;
@@ -145,7 +156,14 @@ public class VideoLabelDetection {
         return success;
     }
 
-
+    /**
+     * Kicks off label detection results by sending request containing video, bucket and notification channel info to
+     * Rekognition client method startLabelDetection.
+     *
+     * @param bucket The S3 bucket name.
+     * @param video The video filename.
+     * @throws Exception
+     */
     private static void StartLabelDetection(String bucket, String video) throws Exception{
 
         NotificationChannel channel= new NotificationChannel()
@@ -167,6 +185,10 @@ public class VideoLabelDetection {
 
     }
 
+    /**
+     * Prints label detection results to console.
+     * @throws Exception
+     */
     private static void GetLabelDetectionResults() throws Exception{
 
         int maxResults=10;
@@ -231,7 +253,9 @@ public class VideoLabelDetection {
 
     }
 
-    // Creates an SNS topic and SQS queue. The queue is subscribed to the topic. 
+    /**
+     *  Creates an SNS topic and SQS queue. The queue is subscribed to the topic.
+     */
     static void CreateTopicandQueue()
     {
         //create a new SNS topic
@@ -269,6 +293,10 @@ public class VideoLabelDetection {
         System.out.println("Queue url: " + sqsQueueUrl);
         System.out.println("Queue sub arn: " + sqsSubscriptionArn );
     }
+
+    /**
+     * Clean up method. Deletes queue and
+     */
     static void DeleteTopicandQueue()
     {
         if (sqs !=null) {
