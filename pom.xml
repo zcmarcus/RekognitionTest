@@ -9,8 +9,8 @@
   <version>1.0-SNAPSHOT</version>
 
   <name>RekognitionTest</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <!--  FIXME: change to actual url-->
+  <url>http://null.net/</url>
 
   <properties>
     <maven.compiler.release>11</maven.compiler.release>
@@ -18,7 +18,6 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <junit-version>4.13</junit-version>
     <junit-platform-surefire-provider-version>1.3.2</junit-platform-surefire-provider-version>
-    <log4j-version>2.13.1</log4j-version>
     <maven-compiler-plugin-version>3.8.1</maven-compiler-plugin-version>
     <maven-surefire-plugin-version>2.19</maven-surefire-plugin-version>
     <maven-resources-plugin-version>2.3</maven-resources-plugin-version>
@@ -33,25 +32,6 @@
       <version>${junit-version}</version>
       <scope>test</scope>
     </dependency>
-
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-core</artifactId>
-      <version>${log4j-version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-api</artifactId>
-      <version>${log4j-version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-web</artifactId>
-      <version>${log4j-version}</version>
-    </dependency>
-
 
     <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
     <dependency>
