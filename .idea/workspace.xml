@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25fbc8a3-b572-4db9-b93b-9c789d4b6013" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Zeph.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zcmarcus/VideoLabelDetection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zcmarcus/VideoLabelDetection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial_docs/Rekognition_mini_demo.docx" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial_docs/Rekognition_mini_demo.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +112,8 @@
       <updated>1585685819415</updated>
       <workItem from="1585685825492" duration="11084000" />
       <workItem from="1585751179408" duration="732000" />
-      <workItem from="1585756344865" duration="2096000" />
+      <workItem from="1585756344865" duration="3062000" />
+      <workItem from="1585769621384" duration="928000" />
     </task>
     <servers />
   </component>
