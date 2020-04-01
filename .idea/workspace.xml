@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tutorial_docs/Rekognition_mini_demo.docx" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial_docs/Rekognition_mini_demo.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial_docs/images/access_keys_for_APIs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial_docs/images/setup_security_credentials.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +161,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585685819415</updated>
-      <workItem from="1585685825492" duration="10649000" />
+      <workItem from="1585685825492" duration="11057000" />
     </task>
     <servers />
   </component>
