@@ -295,7 +295,7 @@ public class VideoLabelDetection {
     }
 
     /**
-     * Clean up method. Deletes queue and
+     * Clean up method. Deletes queue and topic.
      */
     static void DeleteTopicandQueue()
     {
